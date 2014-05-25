@@ -4,6 +4,7 @@
 	border-style: double;
 	border-color: violet;
 	border-width: 0px 12px 0px 12px;
+	-webkit-transition: 0.5s ease-in;
 }
 
 .main {
