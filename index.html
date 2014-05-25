@@ -11,22 +11,10 @@
 	<title> Amazing Penguin </title>
 </head>
 <body>
-	<div class="main">
-		<img id="penguin" src="penguin.jpg" onclick="hatToggle();"/>
+	<div id="wrapper">
+		<div id="main">
+			<img id="penguin" src="penguin.jpg" onclick="hatToggle();"/>
+		</div>
 	</div>
-	<!--
-	<script>
-		function hatToggle() {
-			penguin = document.getElementById("penguin");
-			if (penguin.src.match("penguin-hat")) {
-				penguin.src = "penguin.jpg";
-				no.play();
-			} else {
-				penguin.src = "penguin-hat.jpg";
-				yes.play();
-			};
-		}
-	</script>
-	-->
 </body>
 </html>

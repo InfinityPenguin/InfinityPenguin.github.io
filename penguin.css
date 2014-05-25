@@ -1,20 +1,29 @@
 #penguin {
-	position: relative;
 	border-radius: 50%;
 	border-style: double;
 	border-color: violet;
 	border-width: 0px 12px 0px 12px;
-	-webkit-transition: 0.5s ease-in;
 }
 
-.main {
+#wrapper {
+	height: 60%;
+	width: 60%;
 	margin: 0 auto;
-	text-align: center;
+}
+
+#main {
 	position: relative;
-	top: 70px;
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+	top: 14%;
 }
 
 body {
 	background-image: url("purple.jpg");
 	background-repeat: no-repeat;
+	height: 90%;
+	width: 90%;
+	margin: 0 auto;
+	/* background-position: center; */
 }
