@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<script>
+	var sound = new Audio("yes.mp3");
+	</script>
 	<link type="text/css" rel="stylesheet" href="penguin.css"/>
 	<link type="image/ico" rel="shortcut icon" href="penguin-head.ico"/>
 	<title> Amazing Penguin </title>
@@ -13,6 +16,9 @@
 		function hatToggle() {
 			penguin = document.getElementById("penguin");
 			penguin.src = penguin.src.match("penguin-hat") ? "penguin.jpg" : "penguin-hat.jpg";
+			if (penguin.src.match("penguin-hat")) {
+				sound.play();
+			}
 		}
 	</script>
 </body>
