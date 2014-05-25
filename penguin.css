@@ -7,14 +7,9 @@
 	max-width: 100%;
 }
 
-#wrapper {
-	margin: 0 auto;
-}
-
 #main {
 	text-align: center;
 	margin: 0 auto;
-	display: block;
 	padding: 4.5% 0% 1.8%;
 }
 
@@ -56,7 +51,7 @@
 }
 
 body {
-	background: url("purple.jpg");
+	background: url("purple.jpg") no-repeat;
 	background-size: cover;
 	margin: 0 auto;
 	/* background-position: center; */
