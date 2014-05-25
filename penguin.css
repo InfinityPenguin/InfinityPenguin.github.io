@@ -3,6 +3,8 @@
 	border-style: double;
 	border-color: violet;
 	border-width: 0px 12px 0px 12px;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 #wrapper {
@@ -22,6 +24,7 @@
 body {
 	background-image: url("purple.jpg");
 	background-repeat: no-repeat;
+	background-size: cover;
 	height: 90%;
 	width: 90%;
 	margin: 0 auto;
