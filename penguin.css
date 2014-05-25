@@ -1,0 +1,19 @@
+#penguin {
+	position: relative;
+	border-radius: 50%;
+	border-style: double;
+	border-color: violet;
+	border-width: 0px 12px 0px 12px;
+}
+
+.main {
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: 40px;
+}
+
+body {
+	background-image: url("purple.jpg");
+	background-repeat: no-repeat;
+}
