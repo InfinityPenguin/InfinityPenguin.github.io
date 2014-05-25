@@ -2,7 +2,8 @@
 <html>
 <head>
 	<script>
-	var sound = new Audio("yes.mp3");
+	var yes = new Audio("yes.mp3");
+	var no = new Audio("no.mp3");
 	</script>
 	<link type="text/css" rel="stylesheet" href="penguin.css"/>
 	<link type="image/ico" rel="shortcut icon" href="penguin-head.ico"/>
@@ -15,10 +16,13 @@
 	<script>
 		function hatToggle() {
 			penguin = document.getElementById("penguin");
-			penguin.src = penguin.src.match("penguin-hat") ? "penguin.jpg" : "penguin-hat.jpg";
 			if (penguin.src.match("penguin-hat")) {
-				sound.play();
-			}
+				penguin.src = "penguin.jpg";
+				no.play();
+			} else {
+				penguin.src = "penguin-hat.jpg";
+				yes.play();
+			};
 		}
 	</script>
 </body>
