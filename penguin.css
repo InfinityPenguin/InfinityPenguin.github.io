@@ -2,23 +2,53 @@
 	border-radius: 50%;
 	border-style: double;
 	border-color: violet;
-	border-width: 0px 12px 0px 12px;
+	border-width: 2px 20px 2px 20px;
 	max-height: 100%;
 	max-width: 100%;
 }
 
 #wrapper {
-	height: 60%;
-	width: 60%;
 	margin: 0 auto;
 }
 
 #main {
-	position: relative;
 	text-align: center;
 	margin: 0 auto;
-	width: 80%;
-	top: 14%;
+	display: block;
+	padding: 5% 0% 2%;
+}
+
+.naviBlock {
+	height: 36px;
+	text-align: center;
+	position: relative;
+	/* display: block; */
+	top: 10%;
+}
+
+.left, .right {
+	position: fixed;
+	width: auto;
+	top: 50%;
+	height: 46px;
+}
+
+.right { 
+	right: 0px; 
+}
+.left { 
+	left: 0px; 
+}
+
+.center a {
+	width: 36px;
+	height: 35px;
+	display: block;
+	background: url("backtop.png") no-repeat;
+	margin: 0 auto;
+}
+.center a:hover {
+	background-position: 0px -36px;
 }
 
 body {
