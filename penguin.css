@@ -25,6 +25,7 @@
 	width: 70px;
 	top: 50%;
 	height: 46px;
+	margin-top: -23px;
 }
 .left a:hover, .right a:hover {
 	background-position: -70px 0px;
