@@ -22,41 +22,42 @@
 	height: 36px;
 	text-align: center;
 	position: relative;
-	/* display: block; */
-	top: 10%;
 }
 
-.left, .right {
+.left a, .right a {
 	position: fixed;
-	width: auto;
+	width: 70px;
 	top: 50%;
 	height: 46px;
+	display: block;
+}
+.left a:hover, .right a:hover {
+	background-position: -70px 0px;
 }
 
-.right { 
+.right a { 
 	right: 0px; 
+	background: url("right-arrow.png");
 }
-.left { 
+.left a { 
 	left: 0px; 
+	background: url("left-arrow.png");
 }
 
 .center a {
 	width: 36px;
 	height: 35px;
-	display: block;
-	background: url("backtop.png") no-repeat;
+	background: url("backtop.png");
 	margin: 0 auto;
+	display: block;
 }
 .center a:hover {
 	background-position: 0px -36px;
 }
 
 body {
-	background-image: url("purple.jpg");
-	background-repeat: no-repeat;
+	background: url("purple.jpg");
 	background-size: cover;
-	height: 90%;
-	width: 90%;
 	margin: 0 auto;
 	/* background-position: center; */
 }
