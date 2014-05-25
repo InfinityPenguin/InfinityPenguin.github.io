@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="sandbox.css"/>
+	<link type="image/ico" rel="shortcut icon" href="penguin-head.ico"/>
+	<title> Amazing Penguin </title>
+</head>
+<body>
+	<div class="main">
+		<img id="penguin" src="penguin.jpg" onclick="hatToggle()"/>
+	</div>
+	<script>
+		function hatToggle() {
+			penguin = document.getElementById("penguin");
+			penguin.src = penguin.src.match("penguin-hat") ? "penguin.jpg" : "penguin-hat.jpg";
+		}
+	</script>
+</body>
+</html>
