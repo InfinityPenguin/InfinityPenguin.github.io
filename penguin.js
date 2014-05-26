@@ -27,9 +27,14 @@ function hatToggle() {
 			altSound = yes;
 			break;
 		case "colorful":
-			altPenguin = "penguin-falcon.jpg";
+			altPenguin = "penguin-medieval.jpg";
 			defaultSound = moves;
 			altSound = whoops;
+			break;
+		case "sky":
+			altPenguin = "penguin-winged.jpg";
+			defaultSound = hyaw;
+			altSound = muyoh;
 			break;
 	}
 	if (penguin.src.match(defaultPenguin)) {

@@ -11,11 +11,13 @@
 #penguin.bamboo { border-color: yellowGreen; }
 #penguin.fire { border-color: lemonChiffon; }
 #penguin.colorful { border-color: black; }
+#penguin.sky { border-color: azure; }
 .btn.purple { background-color: ivory; }
 .btn.pink { background-color: hotPink; }
 .btn.bamboo { background-color: greenYellow; }
 .btn.fire { background-color: lemonChiffon; }
 .btn.colorful { background-color: lightGray; }
+.btn.sky { background-color: azure; }
 
 .main {
 	padding: 4.5% 0% 2%;
@@ -62,3 +64,4 @@ body.pink { background: url("backgrounds/pink.jpg") no-repeat; }
 body.bamboo { background: url("backgrounds/bamboo.jpg") no-repeat; }
 body.fire { background: url("backgrounds/fire.jpg") no-repeat; }
 body.colorful { background: url("backgrounds/colorful.jpg") no-repeat; }
+body.sky { background: url("backgrounds/sky.png") no-repeat; }
