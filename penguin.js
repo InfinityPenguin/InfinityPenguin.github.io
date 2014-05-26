@@ -47,4 +47,5 @@ function changeFormat(newClass) {
 	document.body.classList.toggle(newClass);
 	document.getElementById("penguin").classList.toggle(currentClass);
 	document.getElementById("penguin").classList.toggle(newClass);
+	falconKick.play();
 }
