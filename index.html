@@ -4,8 +4,16 @@
 	<title> Amazing Penguin </title>
 	<!-- Audio files --> 
 	<script>
-	var yes = new Audio("yes.mp3");
-	var no = new Audio("no.mp3");
+	var yes = new Audio("sounds/Yes!.mp3");
+	var ouoh = new Audio("sounds/Ouoh!.mp3");
+	var tu = new Audio("sounds/Tu!.mp3");
+	var laugh = new Audio("sounds/evil-laugh.mp3");
+	var whoops = new Audio("sounds/Whoops!.mp3");
+	var moves = new Audio("sounds/Show me your Moves!.mp3");
+	var falconKick = new Audio("sounds/Falcon Kick!.mp3");
+	var geuyah = new Audio("sounds/Geuyah!.mp3");
+	var eeyah = new Audio("sounds/Eeyah!.mp3");
+	var come = new Audio("sounds/Come On!.mp3");
 	</script>
 	<script type="text/javascript" src="penguin.js"></script>
 
@@ -31,6 +39,21 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<img id="penguin" class="purple" src="penguin.jpg" onclick="hatToggle();"/>
+			</div>
+			<div class="col-md-1 col-md-offset-1">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-list"></span>
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><button type="button" class="btn btn-default" onclick="changeFormat('purple')">Purple</button></li>
+						<li><button type="button" class="btn btn-default" onclick="changeFormat('pink')">Pink</button></li>
+						<li><button type="button" class="btn btn-default" onclick="changeFormat('bamboo')">Bamboo</button></li>
+						<li><button type="button" class="btn btn-default" onclick="changeFormat('fire')">Fire</button></li>
+						<li><button type="button" class="btn btn-default" onclick="changeFormat('colorful')">Colorful</button></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

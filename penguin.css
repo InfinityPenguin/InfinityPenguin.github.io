@@ -2,15 +2,20 @@
 	border-radius: 50%;
 	border-style: double;
 	border-width: 2px 20px 2px 20px;
-	box-shadow: 5px 7px 7px #777777;
+	box-shadow: 3px 5px 5px #333333;
 	margin: 0 auto;
 	display: block;
 }
 #penguin.purple { border-color: violet; }
-#penguin.pink { border-color: pink; }
+#penguin.pink { border-color: hotPink; }
 #penguin.bamboo { border-color: yellowGreen; }
-#penguin.fire { border-color: YellowGreen; }
-#penguin.colorful { border-color: red; }
+#penguin.fire { border-color: lemonChiffon; }
+#penguin.colorful { border-color: black; }
+.btn.purple { background-color: ivory; }
+.btn.pink { background-color: hotPink; }
+.btn.bamboo { background-color: greenYellow; }
+.btn.fire { background-color: lemonChiffon; }
+.btn.colorful { background-color: lightGray; }
 
 .main {
 	padding: 4.5% 0% 2%;
@@ -52,8 +57,8 @@
 }
 
 body { background-size: cover; background-position: initial; }
-body.purple { background: url("purple.jpg") no-repeat; }
-body.pink { background: url("pink.jpg") no-repeat; }
-body.bamboo { background: url("bamboo.jpg") no-repeat; }
-body.fire { background: url("fire.jpg") no-repeat; }
-body.colorful { background: url("colorful.jpg") no-repeat; }
+body.purple { background: url("backgrounds/purple.jpg") no-repeat; }
+body.pink { background: url("backgrounds/pink.jpg") no-repeat; }
+body.bamboo { background: url("backgrounds/bamboo.jpg") no-repeat; }
+body.fire { background: url("backgrounds/fire.jpg") no-repeat; }
+body.colorful { background: url("backgrounds/colorful.jpg") no-repeat; }
