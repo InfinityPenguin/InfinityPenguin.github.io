@@ -14,7 +14,6 @@ function hatToggle() {
 			altPenguin = "penguin-scarf.jpg";
 			defaultSound = tu;
 			altSound = eeyah;
-			wer
 			break;
 		case "bamboo":
 			altPenguin = "penguin-tophat.jpg";
