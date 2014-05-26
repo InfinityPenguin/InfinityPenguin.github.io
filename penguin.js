@@ -23,8 +23,8 @@ function hatToggle() {
 		case "fire":
 			defaultPenguin = "penguin-devil.jpg";
 			altPenguin = "penguin-devil-red-eyes.jpg";
-			defaultSound = yes;
-			altSound = laugh;
+			defaultSound = laugh;
+			altSound = yes;
 			break;
 		case "colorful":
 			altPenguin = "penguin-falcon.jpg";
