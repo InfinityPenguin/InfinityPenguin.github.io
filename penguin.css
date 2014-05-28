@@ -3,68 +3,91 @@
 	border-style: double;
 	border-width: 2px 20px 2px 20px;
 	box-shadow: 0px 0px 30px;
-	color: yellow;
+	color: ivory;
 	margin: 0 auto;
 	display: block;
-	transition: ease-in-out 1.5s;
+	transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 1.5s, color linear 0.1s;
 }
-#penguin:hover {
-	box-shadow: 0px 0px 30px;
-	color: red;
-}
-#penguin.glow { 
-	box-shadow: 0px 0px 120px;
-}
+#penguin:hover { box-shadow: 0px 0px 30px; }
+#penguin.glow { box-shadow: 0px 0px 160px; }
 
 #penguin.purple { border-color: violet; }
+#penguin.purple:hover { color: yellow; }
 #penguin.pink { border-color: hotPink; }
+#penguin.pink:hover { color: yellow; }
 #penguin.bamboo { border-color: #999933; }
+#penguin.bamboo:hover { color: yellow; }
 #penguin.fire { border-color: lemonChiffon; }
+#penguin.fire:hover { color: orange; }
 #penguin.colorful { border-color: black; }
+#penguin.colorful:hover { color: cyan; }
 #penguin.sky { border-color: azure; }
-.btn.purple { background-color: ivory; }
+#penguin.sky:hover { color: black; }
+
 .btn.pink { background-color: hotPink; }
 .btn.bamboo { background-color: greenYellow; }
 .btn.fire { background-color: lemonChiffon; }
 .btn.colorful { background-color: lightGray; }
 .btn.sky { background-color: azure; }
 
-.main {
-	padding: 4.5% 0% 2%;
-}
-
 /* Navigation Elements */
+.main { padding: 4.5% 0% 2%; }
+#formatMenu { 
+	background-color: gray;
+	border-radius: 4px;
+	box-shadow: 3px 3px 2px #555555;
+	width: 180px;
+	height: 180px;
+	margin-top: -90px;
+	position: fixed !important; 
+	top: 50%; 
+	right: -180px;
+	transition: linear .1s;
+}
+#formatMenu.show { right: 0px; }
+#formatMenu > * { width: 65%; }
+.icons {
+	height: 100%;
+	padding: 0 2% 0;
+	width: 60%;
+}
+.icons * { 
+	vertical-align: middle; 
+	margin: 2px -1px 2px; 
+	height: 32%; width: 50%; 
+}
+.icons .purple { background-color: violet; }
+.icons .pink { background-color: hotPink; }
+.icons .bamboo { background-color: #999933; }
+.icons .fire { background-color: #C22E2E; }
+.icons .colorful { background-color: cyan; }
+.icons .sky { background-color: azure; }
+
 .naviBlock {
 	height: 36px;
-	text-align: center;
 	position: relative;
 }
-.left a, .right a {
+#menuToggler * {
 	position: fixed;
 	width: 70px;
 	top: 50%;
 	height: 46px;
 	margin-top: -23px;
-}
-.left a:hover, .right a:hover {
-	background-position: -70px 0px;
-}
-.right a { 
 	right: 0px; 
-	background: url("right-arrow.png");
-}
-.left a { 
-	left: 0px; 
 	background: url("left-arrow.png");
+	cursor: pointer;
 }
-.center a {
+
+#menuToggler.show * { background: url("right-arrow.png"); }
+#menuToggler *:hover { background-position: -70px 0px; }
+.center * {
 	margin: 0 auto;
 	width: 36px;
 	height: 35px;
 	background: url("backtop.png");
 	display: block;
 }
-.center a:hover {
+.center *:hover {
 	background-position: 0px -36px;
 }
 

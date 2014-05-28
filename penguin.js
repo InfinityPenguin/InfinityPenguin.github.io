@@ -1,3 +1,15 @@
+function toggleMenu() {
+	toggler = document.getElementById("formatMenu");
+	arrow = document.getElementById("menuToggler");
+	menuTogglerAnimation(toggler);
+	arrow.classList.toggle("show");
+}
+
+function menuTogglerAnimation(menuToggler) {
+	toggler.classList.toggle("hide");
+	toggler.classList.toggle("show");
+}
+
 function penguinGlow() {
 	penguin = document.getElementById("penguin");
 	penguin.classList.toggle("glow");
@@ -38,11 +50,9 @@ function hatToggle() {
 	};
 	if (penguin.src.match(defaultPenguin)) {
 		penguin.setAttribute("src", altPenguin);
-		// new Audio("sounds/" + defaultSound + ".mp3").play();
 		playSound(defaultSound);
 	} else {
 		penguin.setAttribute("src", defaultPenguin);
-		// new Audio("sounds/" + altSound + ".mp3").play();
 		playSound(altSound);
 	};
 }

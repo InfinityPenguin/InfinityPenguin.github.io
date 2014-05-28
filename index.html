@@ -20,7 +20,7 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<script>initializeSoundBoard();</script>
+	<script>initializeSoundBoard(); glow=false;</script>
 </head>
 <body class="purple">
 	<div class="container main">
@@ -28,39 +28,30 @@
 			<div class="col-md-6 col-md-offset-3">
 				<img id="penguin" class="purple" src="penguin.jpg" onclick="hatToggle();"/>
 			</div>
-			<div class="col-md-1 col-md-offset-1">
-				<div class="btn-group">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-						<span class="glyphicon glyphicon-list"></span>
-						<span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" role="menu">
-						<li><button type="button" class="btn btn-default" onclick="changeFormat('purple')">Purple</button></li>
-						<li><button type="button" class="btn btn-default" onclick="changeFormat('pink')">Pink</button></li>
-						<li><button type="button" class="btn btn-default" onclick="changeFormat('bamboo')">Bamboo</button></li>
-						<li><button type="button" class="btn btn-default" onclick="changeFormat('fire')">Fire</button></li>
-						<li><button type="button" class="btn btn-default" onclick="changeFormat('colorful')">Colorful</button></li>
-						<li><button type="button" class="btn btn-default" onclick="changeFormat('sky')">Sky</button></li>
-					</ul>
-				</div>
-			</div>
 		</div>
 	</div>
 	<div class="naviBlock">
-		<div class="left">
-			<a href="filler.html"></a>
+		<div id="formatMenu">
+			<div class="icons">
+				<button type="button" class="purple" onclick="changeFormat('purple')"></button>
+				<button type="button" class="pink" onclick="changeFormat('pink')"></button>
+				<button type="button" class="bamboo" onclick="changeFormat('bamboo')"></button>
+				<button type="button" class="fire" onclick="changeFormat('fire')"></button>
+				<button type="button" class="colorful" onclick="changeFormat('colorful')"></button>
+				<button type="button" class="sky" onclick="changeFormat('sky')"></button>
+			</div>
 		</div>
-		<div class="center">
-			<a href="filler.html"></a>
-		</div>
-		<div class="right">
-			<a href="filler.html"></a>
+		<!--
+		<div class="center"><a href="filler.html"></a></div>
+		--> 
+		<div id="menuToggler">
+			<span onclick="toggleMenu('format')"></span>
 		</div>
 	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-	<script>setInterval(penguinGlow, 1000);</script>
+	<script>if (glow) setInterval(penguinGlow, 1000);</script>
 </body>
 </html>
