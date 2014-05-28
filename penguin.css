@@ -2,10 +2,13 @@
 	border-radius: 50%;
 	border-style: double;
 	border-width: 2px 20px 2px 20px;
-	box-shadow: 3px 5px 5px #333333;
+	box-shadow: 0px 0px 10px #333333;
 	margin: 0 auto;
 	display: block;
+	transition: box-shadow ease-in-out 1.5s;
 }
+#penguin.glow { box-shadow: 0px 0px 50px #333333; }
+
 #penguin.purple { border-color: violet; }
 #penguin.pink { border-color: hotPink; }
 #penguin.bamboo { border-color: #999933; }
