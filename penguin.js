@@ -1,3 +1,21 @@
+function onGlow() {
+	console.log("Called onGlow");
+	glow = document.getElementById("glow");
+	glow.setAttribute("onclick", "offGlow");
+	setInterval(penguinGlow, 1000);
+	glow.onclick = offGlow;
+	console.log(glow.onclick);
+}
+function offGlow() {
+	console.log("Called offGlow");
+	glow = document.getElementById("glow");
+	glow.setAttribute("onclick", "onGlow");
+	clearInterval(penguinGlow);
+	glow.onclick = onGlow;
+	console.log(glow.onclick);
+}
+
+
 function toggleMenu() {
 	console.log("called");
 	toggler = document.getElementById("formatMenu");
@@ -55,10 +73,20 @@ function hatToggle() {
 
 function changeFormat(newClass) {
 	var currentClass = document.body.className;
+	// change background
 	document.body.classList.toggle(currentClass);
 	document.body.classList.toggle(newClass);
+	// change penguin
 	document.getElementById("penguin").classList.toggle(currentClass);
 	document.getElementById("penguin").classList.toggle(newClass);
+	// change button
+	currentButton = document.getElementById(currentTheme + "Button");
+	currentButton.classList.toggle("active");
+	currentButton.disabled = false;
+	currentTheme = newClass;
+	newButton = document.getElementById(currentTheme + "Button");
+	newButton.classList.toggle("active");
+	newButton.disabled = true;
 	playSound("Falcon Kick!");
 }
 

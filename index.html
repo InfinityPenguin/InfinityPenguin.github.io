@@ -20,7 +20,7 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<script>initializeSoundBoard(); glow=false;</script>
+	<script>initializeSoundBoard(); currentTheme="purple"</script>
 </head>
 <body class="purple">
 	<div class="container main">
@@ -33,16 +33,16 @@
 	<div class="naviBlock">
 		<div id="formatMenu" class="show">
 				<div class="icons">
-					<button type="button" class="btn purple" onclick="changeFormat('purple')"></button
-					><button type="button" class="btn pink" onclick="changeFormat('pink')"></button
-					><button type="button" class="btn bamboo" onclick="changeFormat('bamboo')"></button
-					><button type="button" class="btn fire" onclick="changeFormat('fire')"></button
-					><button type="button" class="btn colorful" onclick="changeFormat('colorful')"></button
-					><button type="button" class="btn sky" onclick="changeFormat('sky')"></button>
+					<button id="purpleButton" type="button" class="purple active" onclick="changeFormat('purple')" disabled></button
+					><button id="pinkButton" type="button" class="pink" onclick="changeFormat('pink')"></button
+					><button id="bambooButton" type="button" class="bamboo" onclick="changeFormat('bamboo')"></button
+					><button id="fireButton" type="button" class="fire" onclick="changeFormat('fire')"></button
+					><button id="colorfulButton" type="button" class="colorful" onclick="changeFormat('colorful')"></button
+					><button id="skyButton" type="button" class="sky" onclick="changeFormat('sky')"></button>
 				</div>
 				<div class="options">
 					<div>
-						<button type="button" id="glow" class="btn" onclick="toggleGlow()">
+						<button type="button" id="glow" class="btn" onclick="onGlow()">
 							<span class="glyphicons glyphicon-star"></span>
 						</button>
 					</div>
@@ -62,6 +62,5 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-	<script>if (glow) setInterval(penguinGlow, 1000);</script>
 </body>
 </html>
