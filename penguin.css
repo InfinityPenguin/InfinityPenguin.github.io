@@ -34,8 +34,8 @@
 	position: fixed;
 }
 #formatMenu { 
-	background-color: #777777;
-	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5%; 
 	box-shadow: 3px 3px 2px #555555;
 	width: 200px; height: 200px;
 
@@ -55,16 +55,19 @@
 	height: 33.333%; width: 50%; 
 	margin: 0% 0% 0% 0%;
 }
-.icons .purple { background-color: violet; }
-.icons .pink { background-color: hotPink; }
-.icons .bamboo { background-color: #999933; }
-.icons .fire { background-color: #C22E2E; }
-.icons .colorful { background-color: cyan; }
-.icons .sky { background-color: azure; }
+.icons .purple { background: url("backgrounds/purple.jpg"); background-size: cover; }
+.icons .pink { background: url("backgrounds/pink.jpg"); background-size: cover; }
+.icons .bamboo { background: url("backgrounds/bamboo.jpg"); background-size: cover; }
+.icons .fire { background: url("backgrounds/fire.jpg"); background-size: cover; }
+.icons .colorful { background: url("backgrounds/colorful.jpg"); background-size: cover; }
+.icons .sky { background: url("backgrounds/sky.png"); background-size: cover; }
 .options { 
 	float: left;
 	padding: 10% 3% 10%;
 	height: 100%; width: 30%;
+}
+#float, #glow {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 #float { position: absolute; top: 72%; }
 
