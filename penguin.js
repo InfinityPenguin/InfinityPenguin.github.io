@@ -1,13 +1,9 @@
 function toggleMenu() {
+	console.log("called");
 	toggler = document.getElementById("formatMenu");
 	arrow = document.getElementById("menuToggler");
-	menuTogglerAnimation(toggler);
-	arrow.classList.toggle("show");
-}
-
-function menuTogglerAnimation(menuToggler) {
-	toggler.classList.toggle("hide");
 	toggler.classList.toggle("show");
+	arrow.classList.toggle("show");
 }
 
 function penguinGlow() {

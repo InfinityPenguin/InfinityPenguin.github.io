@@ -24,37 +24,36 @@
 #penguin.sky { border-color: azure; }
 #penguin.sky:hover { color: black; }
 
-.btn.pink { background-color: hotPink; }
-.btn.bamboo { background-color: greenYellow; }
-.btn.fire { background-color: lemonChiffon; }
-.btn.colorful { background-color: lightGray; }
-.btn.sky { background-color: azure; }
-
 /* Navigation Elements */
 .main { padding: 4.5% 0% 2%; }
+.naviBlock {
+	height: 36px;
+	position: relative;
+}
+#formatMenu, menuToggler {
+	position: fixed;
+}
 #formatMenu { 
-	background-color: gray;
+	background-color: #777777;
 	border-radius: 4px;
 	box-shadow: 3px 3px 2px #555555;
-	width: 180px;
-	height: 180px;
-	margin-top: -90px;
-	position: fixed !important; 
+	width: 200px; height: 200px;
+
+	margin-top: -100px;
 	top: 50%; 
-	right: -180px;
+	right: -200px;
 	transition: linear .1s;
 }
 #formatMenu.show { right: 0px; }
-#formatMenu > * { width: 65%; }
 .icons {
 	height: 100%;
-	padding: 0 2% 0;
-	width: 60%;
+	width: 70%;
+	float: left;
+	padding: 5%;
 }
 .icons * { 
-	vertical-align: middle; 
-	margin: 2px -1px 2px; 
-	height: 32%; width: 50%; 
+	height: 33.333%; width: 50%; 
+	margin: 0% 0% 0% 0%;
 }
 .icons .purple { background-color: violet; }
 .icons .pink { background-color: hotPink; }
@@ -62,36 +61,27 @@
 .icons .fire { background-color: #C22E2E; }
 .icons .colorful { background-color: cyan; }
 .icons .sky { background-color: azure; }
-
-.naviBlock {
-	height: 36px;
-	position: relative;
+.options { 
+	float: left;
+	padding: 10% 3% 10%;
+	height: 100%; width: 30%;
 }
+#float { position: absolute; top: 72%; }
+
 #menuToggler * {
-	position: fixed;
-	width: 70px;
-	top: 50%;
-	height: 46px;
-	margin-top: -23px;
-	right: 0px; 
 	background: url("left-arrow.png");
 	cursor: pointer;
+	position: fixed;
+	right: 0px; 
+	width: 70px;
+	height: 46px;
+	top: 50%;
+	margin-top: -23px;
 }
-
 #menuToggler.show * { background: url("right-arrow.png"); }
 #menuToggler *:hover { background-position: -70px 0px; }
-.center * {
-	margin: 0 auto;
-	width: 36px;
-	height: 35px;
-	background: url("backtop.png");
-	display: block;
-}
-.center *:hover {
-	background-position: 0px -36px;
-}
 
-body { background-size: cover; background-position: initial; }
+body { background-size: cover !important; background-position: initial; }
 body.purple { background: url("backgrounds/purple.jpg") no-repeat; }
 body.pink { background: url("backgrounds/pink.jpg") no-repeat; }
 body.bamboo { background: url("backgrounds/bamboo.jpg") no-repeat; }
