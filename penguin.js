@@ -38,10 +38,12 @@ function hatToggle() {
 	};
 	if (penguin.src.match(defaultPenguin)) {
 		penguin.setAttribute("src", altPenguin);
-		new Audio("sounds/" + defaultSound + ".mp3").play();
+		// new Audio("sounds/" + defaultSound + ".mp3").play();
+		playSound(defaultSound);
 	} else {
 		penguin.setAttribute("src", defaultPenguin);
-		new Audio("sounds/" + altSound + ".mp3").play();
+		// new Audio("sounds/" + altSound + ".mp3").play();
+		playSound(altSound);
 	};
 }
 
@@ -51,5 +53,41 @@ function changeFormat(newClass) {
 	document.body.classList.toggle(newClass);
 	document.getElementById("penguin").classList.toggle(currentClass);
 	document.getElementById("penguin").classList.toggle(newClass);
-	falconKick.play();
+	playSound("Falcon Kick!");
+}
+
+// initialize soundBoard
+function initializeSoundBoard() {
+	console.log("Creating soundboard...");
+	sounds = {};
+	soundIndex = 0;
+	addSound(sounds, "Yes!");
+	addSound(sounds, "Ouoh!");
+	addSound(sounds, "Tu!");
+	addSound(sounds, "Eeyah!");
+	addSound(sounds, "Come On!");
+	addSound(sounds, "Geuyah!");
+	addSound(sounds, "evil-laugh");
+	addSound(sounds, "Show me your Moves!");
+	addSound(sounds, "Whoops!");
+	addSound(sounds, "Hyaw!");
+	addSound(sounds, "Muyoh!");
+	addSound(sounds, "Falcon Kick!");
+	console.log(sounds);
+}
+// returns an array of Audio elements from the string soundName
+function initializeSound(soundName) {
+	backupSize = 3;
+	var sounds = [];
+	for (i = 0; i < backupSize; i++) 
+		sounds[i] = new Audio("sounds/" + soundName + ".mp3");
+	return sounds;
+}
+// initializes the soundName into an array of sounds and add it to the soundBoard
+function addSound(soundBoard, soundName) {
+	soundBoard[soundName] = initializeSound(soundName);
+}
+// plays a sound associated with soundName 
+function playSound(soundName) {
+	sounds[soundName][(soundIndex++)%3].play();
 }
