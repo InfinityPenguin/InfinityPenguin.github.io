@@ -1,23 +1,31 @@
-function onGlow() {
-	console.log("Called onGlow");
-	glow = document.getElementById("glow");
-	glow.setAttribute("onclick", "offGlow");
-	setInterval(penguinGlow, 1000);
-	glow.onclick = offGlow;
-	console.log(glow.onclick);
+function onEffect(effectName, time) {
+	console.log("Turning on " + effectName + " effect...");
+	effectBtn = document.getElementById(effectName.toLowerCase());
+	// change button effect 
+	console.log("Onclick function is currently " + effectBtn.onclick);
+	effectBtn.onclick = function() { offEffect(effectName, time) };
+	console.log("Setting onclick to function: " + effectBtn.onclick);
+	// activate effect
+	effectFunction = effects[effectName];
+	effectName = setInterval(effectFunction, time);
+	console.log("Setting interval for " + effectFunction);
+	playSound("Hmm...!");
 }
-function offGlow() {
-	console.log("Called offGlow");
-	glow = document.getElementById("glow");
-	glow.setAttribute("onclick", "onGlow");
-	clearInterval(penguinGlow);
-	glow.onclick = onGlow;
-	console.log(glow.onclick);
+function offEffect(effectName, time) {
+	console.log("Turning off " + effectName + " effect...");
+	effectBtn = document.getElementById(effectName.toLowerCase());
+	// change button effect
+	console.log("Onclick function is currently " + effectBtn.onclick);
+	effectBtn.onclick = function() { onEffect(effectName, time) };
+	console.log("Setting onclick to function: " + effectBtn.onclick);
+	// activate effect
+	effectFunction = effects[effectName];
+	clearInterval(effectName);
+	console.log("Clearing interval for " + effectFunction);
+	playSound("Muyoh!");
 }
-
 
 function toggleMenu() {
-	console.log("called");
 	toggler = document.getElementById("formatMenu");
 	arrow = document.getElementById("menuToggler");
 	toggler.classList.toggle("show");
@@ -27,6 +35,10 @@ function toggleMenu() {
 function penguinGlow() {
 	penguin = document.getElementById("penguin");
 	penguin.classList.toggle("glow");
+}
+function penguinFloat() {
+	penguin = document.getElementById("penguin");
+	penguin.classList.toggle("float");
 }
 
 function hatToggle() {
@@ -107,7 +119,18 @@ function initializeSoundBoard() {
 	addSound(sounds, "Hyaw!");
 	addSound(sounds, "Muyoh!");
 	addSound(sounds, "Falcon Kick!");
+	addSound(sounds, "Hmm...!");
 	console.log(sounds);
+}
+function initializeEffectBoard() {
+	console.log("Creating effectBoard...");
+	effects = {};
+	addEffect(effects, "Glow", penguinGlow);
+	addEffect(effects, "Float", penguinFloat);
+	console.log(effects);
+}
+function addEffect(effectBoard, effectName, effectFunction) {
+	effectBoard[effectName] = effectFunction;
 }
 // returns an array of Audio elements from the string soundName
 function initializeSound(soundName) {

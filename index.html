@@ -20,10 +20,14 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<script>initializeSoundBoard(); currentTheme="purple"</script>
+	<script>
+		initializeSoundBoard(); 
+		initializeEffectBoard();
+		currentTheme="purple";
+	</script>
 </head>
 <body class="purple">
-	<div class="container main">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<img id="penguin" class="purple" src="penguin.jpg" onclick="hatToggle();"/>
@@ -31,26 +35,26 @@
 		</div>
 	</div>
 	<div class="naviBlock">
-		<div id="formatMenu" class="show">
+		<div id="formatMenu">
 				<div class="icons">
-					<button id="purpleButton" type="button" class="purple active" onclick="changeFormat('purple')" disabled></button
-					><button id="pinkButton" type="button" class="pink" onclick="changeFormat('pink')"></button
-					><button id="bambooButton" type="button" class="bamboo" onclick="changeFormat('bamboo')"></button
-					><button id="fireButton" type="button" class="fire" onclick="changeFormat('fire')"></button
-					><button id="colorfulButton" type="button" class="colorful" onclick="changeFormat('colorful')"></button
-					><button id="skyButton" type="button" class="sky" onclick="changeFormat('sky')"></button>
+					<button id="purpleButton" type="button" class="purple active" data-toggle="tooltip" title="Purple" onclick="changeFormat('purple')" disabled></button
+					><button id="pinkButton" type="button" class="pink" data-toggle="tooltip" title="Pink" onclick="changeFormat('pink')"></button
+					><button id="bambooButton" type="button" class="bamboo" data-toggle="tooltip" title="Bamboo" onclick="changeFormat('bamboo')"></button
+					><button id="fireButton" type="button" class="fire" data-toggle="tooltip" title="Fire" onclick="changeFormat('fire')"></button
+					><button id="colorfulButton" type="button" class="colorful" data-toggle="tooltip" title="Colorful" onclick="changeFormat('colorful')"></button
+					><button id="skyButton" type="button" class="sky" data-toggle="tooltip" title="Sky" onclick="changeFormat('sky')"></button>
 				</div>
 				<div class="options">
 					<div>
-						<button type="button" id="glow" class="btn" onclick="onGlow()">
+						<button type="button" id="glow" class="btn" data-toggle="tooltip" title="Glow" onclick="onEffect('Glow', 1000)">
 							<span class="glyphicons glyphicon-star"></span>
 						</button>
 					</div>
-					<div id="menuToggler" class="show">
+					<div id="menuToggler">
 						<span onclick="toggleMenu()"></span>
 					</div>
 					<div>
-						<button type="button" id="float" class="btn" onclick="toggleFloat()">
+						<button type="button" id="float" class="btn" data-toggle="tooltip" title="Float" onclick="onEffect('Float', 2000)">
 							<span class="glyphicons glyphicon-cloud"></span>
 						</button>
 					</div>

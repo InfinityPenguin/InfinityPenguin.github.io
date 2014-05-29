@@ -4,12 +4,13 @@
 	border-width: 2px 20px 2px 20px;
 	box-shadow: 0px 0px 30px;
 	color: ivory;
-	margin: 0 auto;
+	margin: 13% auto 0%;
 	display: block;
-	transition: border-color ease-in-out 0.2s, box-shadow ease-in-out 1.5s, color linear 0.1s;
+	transition: border-color ease-in-out 0.2s, box-shadow ease-in-out 1.2s, color linear 0.1s, margin ease-in-out 2.5s;
 }
 #penguin:hover { box-shadow: 0px 0px 30px; }
-#penguin.glow { box-shadow: 0px 0px 160px; }
+#penguin.glow { box-shadow: 0px 0px 140px; }
+#penguin.float { margin: 5% auto 0%; }
 
 #penguin.purple { border-color: violet; }
 #penguin.purple:hover { color: yellow; }
@@ -24,8 +25,6 @@
 #penguin.sky { border-color: azure; }
 #penguin.sky:hover { color: black; }
 
-/* Navigation Elements */
-.main { padding: 4.5% 0% 2%; }
 .naviBlock {
 	height: 36px;
 	position: relative;
@@ -72,7 +71,7 @@
 	padding: 10% 3% 10%;
 	height: 100%; width: 30%;
 }
-#float, #glow { background-color: rgba(255, 255, 255, 0.2); }
+#float, #glow { background-color: rgba(255, 255, 255, 0.6); }
 #float { position: absolute; top: 72%; }
 
 #menuToggler * {
