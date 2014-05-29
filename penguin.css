@@ -6,11 +6,21 @@
 	color: ivory;
 	margin: 13% auto 0%;
 	display: block;
-	transition: border-color ease-in-out 0.2s, box-shadow ease-in-out 1.2s, color linear 0.1s, margin ease-in-out 2.5s;
+	transition: border-color ease-in-out 0.2s, box-shadow ease-in-out 1.2s, color ease-in-out 0.1s;
+	-webkit-transition: 2s ease-in-out;
+	-moz-transition: 2s ease-in-out;
+	-o-transition: 2s ease-in-out;
+	-ms-transition: 2s ease-in-out;
 }
 #penguin:hover { box-shadow: 0px 0px 30px; }
-#penguin.glow { box-shadow: 0px 0px 140px; }
-#penguin.float { margin: 5% auto 0%; }
+#penguin.glow { box-shadow: 0px 0px 200px; }
+#penguin.float { 
+	-moz-transform: translateY(-5%);
+	-webkit-transform: translateY(-5%);
+	-o-transform: translateY(-5%);
+	-ms-transform: translateY(-5%);
+	transform: translateY(-5%);
+}
 
 #penguin.purple { border-color: violet; }
 #penguin.purple:hover { color: yellow; }
@@ -29,7 +39,7 @@
 	height: 36px;
 	position: relative;
 }
-#formatMenu, menuToggler {
+#formatMenu {
 	position: fixed;
 }
 #formatMenu { 
@@ -41,9 +51,21 @@
 	margin-top: -100px;
 	top: 50%; 
 	right: -200px;
-	transition: linear .1s;
+	-webkit-transition: .1s linear;
+	-moz-transition: .1s linear;
+	-o-transition: .1s linear;
+	-ms-transition: .1s linear;
 }
-#formatMenu.show { right: 0px; }
+#formatMenu.show { 
+	/*
+	-moz-transform: translateX(-200px);
+	-webkit-transform: translateX(-200px);
+	-o-transform: translateX(-200px);
+	-ms-transform: translateX(-200px);
+	transform: translateX(-200px);
+	*/
+	right: 0px;
+}
 .icons {
 	height: 100%;
 	width: 70%;
@@ -83,8 +105,17 @@
 	height: 46px;
 	top: 50%;
 	margin-top: -23px;
+	-webkit-transition: -webkit-transform .2s ease-in-out;
+	-moz-transition: -webkit-transform .2s ease-in-out;
+	-o-transition: -webkit-transform .2s ease-in-out;
+	-ms-transition: -webkit-transform .2s ease-in-out;
 }
-#menuToggler.show * { background: url("right-arrow.png"); }
+#menuToggler.show * { 
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+}
 #menuToggler *:hover { background-position: -70px 0px; }
 
 body { background-size: cover !important; background-position: initial; }

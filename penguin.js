@@ -3,7 +3,7 @@ function onEffect(effectName, time) {
 	effectBtn = document.getElementById(effectName.toLowerCase());
 	// change button effect 
 	console.log("Onclick function is currently " + effectBtn.onclick);
-	effectBtn.onclick = function() { offEffect(effectName, time) };
+	effectBtn.onclick = function() { console.log(effectName); offEffect(effectName, time) };
 	console.log("Setting onclick to function: " + effectBtn.onclick);
 	// activate effect
 	effectFunction = effects[effectName];
